@@ -1,0 +1,28 @@
+High Level Design for FEWD Capstone
+
+Summary: This webapp will allow individuals to enter their desired job and location and return a list of the top 15 skills that are in currently in demand for that position in that location. 
+
+It will do this by making an API call to Indeed and pulling the 50 most recently posted jobs from Indeed, scanning through them searching for skill-keywords and counting the number of times each skill appears across the post. The top skills are returned to the user giving them an accurate idea of desired skills for their position in the area. 
+
+Requirements:
+-make API call to Indeed - pulling 50 most recently posted positions
+-be responsive
+-polished appearance
+-allow users to input their location
+-inital app will restrict position to software development
+-compile list of to 50 languages, frameworks, and skills in software development-scan through each posting and incrementing a counter associated with skill
+-return top 10 skills in that area for software development for user
+
+Future Additions:
+-allow users to input any position
+-determine a way to recognize skills words without having to manually create it
+	a. perhaps linkedin has a usable database that we could use
+	b. otherwise ask user - Is this a skill? and have it manually learn over 	time. Obviously find common word list make those none skills immediately
+-show skill trends overtime
+-make api calls to multiple different job postings in order to give a fuller picture. Interested in start-ups - draw from Angels List, interested in small-medium businesses pull from Indeed, interested in both- draw from both and display both
+-research ways to meaninfully incorporate census data to allow users to see wider picture of hiring in the area - business growth, city growth, average age of city...
+-potentially allow users to enter their resume and return a score against the position they'd like. You meet 90% of the top in-demand skills on your resume. 
+
+Satisfactory state: User inputs location, job defaults to entry level software developr, app scans through indeed postings and compares it to pre-selected database of skills. Returns top skills to user in that particular area. 
+
+Ideal state: User inputs any position, user inputs any location, the app will pull data from multiple job sites provding skill needs for multiple categories of  busisnesses. A robust tool to allow people to see the current skills in demand in an area across a spectrum of business sizes, shows the trends for the skills, and provides meaninful data about how they stack up.
